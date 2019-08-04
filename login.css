@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+section{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(bg2.jpg) no-repeat;
+    background-size: cover;
+  
+}
+section .layer2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url(bg2.jpg) no-repeat fixed center;
+    background-size: cover;
+    transition: 3s;
+}
+section .layer1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 40px;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 50%;
+    background: url(bg2.jpg) no-repeat center;
+    background-size: 330%;
+    z-index: 1;
+    transition: 3s;
+}
+.layer1:hover ~ .layer2{filter: blur(5px);}
+.layer1:hover{box-shadow: 0 25px 60px rgba(255, 255, 255, 0.12);}
+input{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    background: none;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid rgba(176, 41, 180, 0.8) ;
+    font-size: 25px;
+    border-radius: 25px;
+    letter-spacing: 5px;
+    color: #fff;
+    transition: 1s linear;
+}
+h1{
+    border-bottom: 3px solid rgba(176, 41, 180, 0.8) ;
+    width: 26%;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: 2s ;
+}
+input[type="submit"]{width: 30%;}
+input[value="Login"]:hover{
+    background-color: rgba(252, 252, 252, 0.4);
+    color: #fff;
+    width: 40%;
+    transition: 2s linear;
+    cursor: pointer;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    background-color: rgba(67, 67, 67, 0.4);
+    width: 80%;
+    color: #fff;
+}
+input[value="Login"]:active{
+    background-color: rgba(176, 41, 180, 0.8);
+    color: rgb(255, 255, 255);
+    transition: 0ms;
+}
